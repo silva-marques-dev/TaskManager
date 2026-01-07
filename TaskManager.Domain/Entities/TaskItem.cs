@@ -17,5 +17,11 @@
         {
             IsCompleted = true;
         }
+        //Validação e mensagem de erro
+        private void ValidateTitle(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title))
+                throw new ArgumentException("O título da tarefa é obrigatório.");
+        }
     }
 }
